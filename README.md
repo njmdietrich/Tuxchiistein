@@ -7,7 +7,7 @@
 
 ## nx2 + Lichiistein Linux PGO integration
 
-This branch combines upstream Lichii `nx2` at `f1cd98c105` with Lichiistein at `8f55ee5593`,
+This branch combines upstream Lichii `nx2` at `f2c6d533ef` with Lichiistein at `8f55ee5593`,
 preserving both histories. Some Lichiistein changes already have newer upstream equivalents;
 those upstream implementations are retained. See [the integration notes](docs/nx2/lichiistein-integration.md).
 

@@ -214,6 +214,7 @@ jobs:
           --executable build/release/bin/lichii \
           --executable build/release/bin/eden-cli \
           "${fsr4_library[@]}" \
+          --exclude-library 'libvulkan.so*' \
           --desktop-file dist/io.github.zortos293.lichii.desktop \
           --icon-file "$icon" \
           --plugin qt \
@@ -226,6 +227,10 @@ jobs:
         ln -s usr/bin/eden-cli lichii/eden-cli
         tar -czf "lichii-${GITHUB_SHA}-${{ env.BUILD_PLATFORM }}.tar.gz" lichii
         ls -la "lichii-${GITHUB_SHA}-${{ env.BUILD_PLATFORM }}.tar.gz"
+        if tar -tzf "lichii-${GITHUB_SHA}-${{ env.BUILD_PLATFORM }}.tar.gz" | grep '/libvulkan\.so'; then
+          echo "::error::The package bundles the Vulkan loader"
+          exit 1
+        fi
         # Both x86-64 packages must carry fsr4-vk and its licences.
         if [ "$arch" = x86_64 ]; then
           test "$(tar -tzf "lichii-${GITHUB_SHA}-${{ env.BUILD_PLATFORM }}.tar.gz" |
