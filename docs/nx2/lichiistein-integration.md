@@ -12,18 +12,18 @@ Sources at the start of the integration:
 - Git reports 96 non-merge Lichiistein commits without patch-equivalent commits in upstream.
 
 Latest upstream sync: `zortos293/Lichii:nx2` at
-`f2c6d533ef1870f1ff43c32f02b228d18393be08`. The frontend and build targets now use
+`ea089c9ad583ff4775c2fa27cc63e10817960953`. The frontend and build targets now use
 upstream's `lichii` names; the shader recipe retention and FSR 4 feature fixes are retained.
 
-The November 15 sync includes the merged Ocarina camera-binding fix (#1659), upstream's lazy
-background prebuild and used-session ordering, and its Linux Vulkan-loader packaging fix.
-Recipe preparation and retained shader infos/SPIR-V remain available.
+The November 17 sync keeps recipe preparation and retained shader infos/SPIR-V, while
+integrating upstream's driver-build timing, cache-save ordering, expanded mesh emulation and
+RDNA2 workarounds. The merged Ocarina camera-binding fix (#1659) remains included.
 
 ## Merge decisions
 
 - Keep Lichiistein's recipes, precompilation, driver-crash journal, canonical native pipeline
   keys, the mesh shader setting, image recycling, draw and buffer changes, and Ocarina patches.
-- Automatic mesh shaders follow upstream: RADV RDNA2 uses the compute fallback. Native and
+- Automatic mesh shaders follow upstream: AMD RDNA2 uses the compute fallback. Native and
   Compute remain available as explicit overrides.
 - Adapt precompiled graphics pipelines to upstream's SPIR-V retention API, so eviction can
   rebuild them without translating again. Preserve upstream's geometry-output pruning,

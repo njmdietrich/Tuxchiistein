@@ -7,7 +7,7 @@
 
 ## nx2 + Lichiistein Linux PGO integration
 
-This branch combines upstream Lichii `nx2` at `f2c6d533ef` with Lichiistein at `8f55ee5593`,
+This branch combines upstream Lichii `nx2` at `ea089c9ad5` with Lichiistein at `8f55ee5593`,
 preserving both histories. Some Lichiistein changes already have newer upstream equivalents;
 those upstream implementations are retained. See [the integration notes](docs/nx2/lichiistein-integration.md).
 
@@ -68,6 +68,8 @@ No game data or precompile recipes are included. Shader preparation only runs if
 
 # Lichii
 
+[![Total downloads](https://img.shields.io/github/downloads/zortos293/Lichii/total)](https://github.com/zortos293/Lichii/releases) [![Latest release downloads](https://img.shields.io/github/downloads/zortos293/Lichii/latest/total)](https://github.com/zortos293/Lichii/releases) [![Latest release](https://img.shields.io/github/v/release/zortos293/Lichii)](https://github.com/zortos293/Lichii/releases)
+
 Lichii is an experimental, open-source Nintendo Switch and Switch 2 emulator written in C++. It builds on Eglantine, Eden, yuzu and Sudachi, preserving their contributions while developing this fork's game compatibility and renderer fixes.
 
 This is an independent fork, not an official release of those upstream projects. Lichii is not affiliated with Nintendo.
@@ -78,7 +80,7 @@ Visit the [Lichii game compatibility website](https://lichii.zortos.me) to find 
 
 Download Lichii only from this repository's [releases page](https://github.com/zortos293/Lichii/releases). Lichii has no other download site: archives offered elsewhere, such as lichii.org, are not built by this project, and one has been reported to install malware ([#545](https://github.com/zortos293/Lichii/issues/545)).
 
-On Windows, extract the entire build archive and run **lichii.exe**. Only use games and system files you have legally obtained. Games, keys and firmware are not included.
+On Windows, extract the entire build archive and run **lichii.exe**. Use homebrew you have permission to run, or your own games and system files dumped from a console you own, where permitted by applicable law. Games, keys and firmware are not included. The project does not provide download sources for them. Owning a console or game does not by itself establish permission to bypass access controls or redistribute its files.
 
 ### Existing saves and settings
 
@@ -102,7 +104,7 @@ When [reporting an issue](https://github.com/zortos293/Eglantine/issues), includ
 - Relevant settings and steps to reproduce the problem.
 - A screenshot and the log from the affected session, after checking it for personal information.
 
-Do not upload game files, keys, firmware or private account information.
+Do not upload game files, keys, firmware or private account information. Bug bundles, GPU traces, shader dumps, pipeline caches and crash dumps can also contain game data. Do not attach them to public reports; ask a maintainer for handling instructions before sharing them. Plain-text logs should be checked for sensitive information before posting.
 
 ## Building and contributing
 
@@ -150,6 +152,6 @@ Send each coin on its matching network. Coins sent on the wrong network can't be
 
 ## Credits and license
 
-Lichii inherits the work of the Eglantine, Eden, yuzu and Sudachi projects and their contributors, including Eglantine's original developer Camille LaVey. Original copyright notices and third-party licenses are retained.
+Lichii inherits the work of the Eglantine, Eden, yuzu and Sudachi projects and their contributors, including Eglantine's original developer Camille LaVey. Upstream attribution and third-party license obligations continue to apply.
 
 See [LICENSE.txt](LICENSE.txt) and the source files for applicable license terms.

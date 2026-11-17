@@ -165,11 +165,11 @@ ENUM(GpuUnswizzle, VeryLow, Low, Normal, Medium, High)
 ENUM(GpuUnswizzleChunk, VeryLow, Low, Normal, Medium, High)
 ENUM(TemperatureUnits, Celsius, Fahrenheit)
 ENUM(ExtendedDynamicState, Disabled, EDS1, EDS2, EDS3);
+ENUM(MeshShaderMode, Automatic, Native, Compute);
 ENUM(GpuLogLevel, Off, Errors, Standard, Verbose, All)
 ENUM(GameListMode, TreeView, GridView, CarouselView);
 ENUM(SpeedMode, Standard, Turbo, Slow);
 ENUM(FrameGenType, Lsfg, Fsr3, NvidiaDlssG);
-ENUM(MeshShaderMode, Automatic, Native, Compute);
 
 template <typename Type>
 inline std::string_view CanonicalizeEnum(Type id) {
