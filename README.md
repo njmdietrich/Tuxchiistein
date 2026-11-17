@@ -5,6 +5,10 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 -->
 
+This test branch adds shader recipe support to upstream Lichii. See
+[the branch scope and comparison instructions](docs/nx2/shader-recipes.md).
+
+
 <h2 align="center">⚠️ Lichii has no official website ⚠️</h2>
 
 > [!CAUTION]
