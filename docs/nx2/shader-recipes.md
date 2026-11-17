@@ -13,9 +13,17 @@ Saved shader infos include the current upstream sky, barrier and pointer-classif
 older saved-info formats are prepared again.
 
 Upstream's ordinary pipeline keys, pipeline eviction, image allocation and collection,
-buffer uploads, draw shortcuts, synchronization, timing, shader translation and FSR4 behavior
-are retained. The other fork workarounds, image recycler, canonical pipeline keys, crash-build
-journal and profiling extensions are not ported.
+buffer uploads, draw shortcuts, synchronization, timing and shader translation are retained.
+FSR4 additionally includes the two pending upstream fixes listed below. The other fork
+workarounds, image recycler, canonical pipeline keys, crash-build journal and profiling
+extensions are not ported.
+
+Two pending upstream FSR4 fixes are additionally merged for RX 9070 XT/RADV testing:
+
+- [Lichii #1540](https://github.com/zortos293/Lichii/pull/1540): check the enabled core
+  buffer-device-address feature instead of requiring its KHR extension flag.
+- [Lichii #1595](https://github.com/zortos293/Lichii/pull/1595): select fsr4-vk's legacy
+  backend descriptor on Linux, with compile-time checks of the descriptor layout.
 
 The Linux x86-64 PGO workflow uses the full integration's clang 23, PGO profile, Qt version and
 build flags. It packages upstream's Linux FSR4 runtime and disables the updater for these test
