@@ -1,7 +1,8 @@
 # Upstream with shader recipes
 
 Branch: `test/upstream-shader-recipes`.
-Base: `zortos293/Lichii:nx2` at `907d54757b838fb4275b8d466ff76de79738ed21`.
+Latest upstream merge: `zortos293/Lichii:nx2` at
+`60ee2ef62a9e844e8cf494ccfe1e310814b998d4` (November 18).
 Recipe support is ported from `njmdietrich/Tuxchiistein:nx2-lichiistein-linux-pgo` at
 `a955e7cf73be580ab12139e68f3c07f7f9e117ca`.
 

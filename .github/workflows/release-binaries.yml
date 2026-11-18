@@ -61,7 +61,7 @@ jobs:
         host: linux
         target: desktop
         arch: linux_gcc_64
-        modules: qtcharts
+        modules: qtcharts qtimageformats
         cache: true
     - name: Install clang for PGO
       shell: bash
